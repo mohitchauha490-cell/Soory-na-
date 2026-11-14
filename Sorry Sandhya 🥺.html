@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandhya, sorry 🥺 – Mohit</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#ffe3ee;--bg2:#ffc7dc;--ink:#4a1030;--rose:#d81b60;--soft:#fff7fa;--card:rgba(255,255,255,.78);color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg1:#2a0b1b;--bg2:#4a1230;--ink:#ffe6f0;--rose:#ff6fa5;--soft:#3a1027;--card:rgba(255,255,255,.08);color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2));min-height:100vh;overflow-x:hidden;text-align:center}
+.float{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.float span{position:absolute;bottom:-40px;font-size:24px;animation:up linear infinite;opacity:.8}
+@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:36px 20px 60px}
+h1{font-family:Caveat,cursive;font-size:clamp(46px,13vw,76px);margin:6px 0;line-height:1;color:var(--rose)}
+.cry{font-size:84px;display:inline-block;animation:sway 2.4s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(-8deg) scale(1.08)}}
+.card{background:var(--card);backdrop-filter:blur(6px);border-radius:22px;padding:22px 20px;margin:20px 0;text-align:left;line-height:1.7;box-shadow:0 8px 30px rgba(216,27,96,.15)}
+.card h2{font-family:Caveat,cursive;font-size:34px;margin:0 0 6px;color:var(--rose)}
+.photo{width:170px;height:170px;border-radius:50%;margin:16px auto;display:grid;place-items:center;font-size:76px;background:radial-gradient(circle,#fff,#ffc1d8);border:5px solid var(--rose);animation:beat 1.6s infinite}
+@keyframes beat{50%{transform:scale(1.06)}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.tags b{background:var(--rose);color:#fff;font-weight:500;padding:7px 14px;border-radius:99px;font-size:14px}
+.promise li{margin:8px 0}
+button{font:600 17px Poppins,sans-serif;border:0;border-radius:99px;padding:14px 26px;margin:8px;cursor:pointer;background:var(--rose);color:#fff;box-shadow:0 6px 18px rgba(216,27,96,.4);transition:transform .15s}
+button:hover{transform:scale(1.06)}button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+#no{background:#999;box-shadow:none;position:relative}
+#win{display:none}
+#win h1{font-size:clamp(40px,11vw,64px)}
+.sig{font-family:Caveat,cursive;font-size:34px;margin-top:20px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="float" id="fl" aria-hidden="true"></div>
+<main>
+  <div class="cry">🥺</div>
+  <h1>Sandhya, sorry na…</h1>
+  <p>Ye page sirf tumhare liye hai. Bas 1 minute de do 💗</p>
+
+  <div class="photo" aria-hidden="true">🌸</div>
+
+  <section class="card">
+    <h2>Meri galti 😔</h2>
+    Maine tumhe “ja nikal, dimag mat kharab kar” bola. Ye bilkul galat tha. Tum meri fikar kar rahi thi, aur maine gusse mein tumhe hi hurt kar diya. Sorry, dil se. 🙏
+  </section>
+
+  <section class="card">
+    <h2>Tum kitni pyari ho ✨</h2>
+    Tumhari smile se din ban jata hai, aur tumhara dil itna bada hai ki tum doosron ki sehat ki bhi tension leti ho. Fashion designer banne ka sapna lekar aage badh rahi ho, aur sach mein tumhara taste kamaal ka hai. Pink saree mein to… 😍
+    <div class="tags"><b>Caring 🤗</b><b>Talented 🎨</b><b>Pyari smile 😊</b><b>Sachchi dost 🫶</b></div>
+  </section>
+
+  <section class="card">
+    <h2>Mera promise 🤞</h2>
+    <ul class="promise">
+      <li>Smoking chhodne ki shuruaat aaj se, sach mein 🚭</li>
+      <li>Tumhari baat ko dhyan se sunna, gusse mein nahi bolna 🙊</li>
+      <li>Is dosti ko kabhi lightly nahi lunga 💞</li>
+    </ul>
+    Tumne sahi kaha tha. Thanks for caring. 💝
+  </section>
+
+  <h2 style="font-family:Caveat,cursive;font-size:38px;color:var(--rose);margin:26px 0 4px">Maaf kar doge na? 🥹</h2>
+  <button id="yes">Haan, maaf kiya 💖</button>
+  <button id="no">Abhi nahi 😤</button>
+
+  <div id="win">
+    <div class="cry">🥰</div>
+    <h1>Thank you Sandhya! 🎉</h1>
+    <p>Dosti wapas on! Ab chai/coffee meri taraf se ☕</p>
+  </div>
+
+  <div class="sig">— Tumhara dost, Mohit 🫶</div>
+</main>
+<script>
+const fl=document.getElementById('fl'),em=['💖','🌸','✨','💗','🥺','🌷','💞'];
+function spawn(n){for(let i=0;i<n;i++){const s=document.createElement('span');s.textContent=em[Math.floor(Math.random()*em.length)];s.style.left=Math.random()*100+'%';s.style.fontSize=16+Math.random()*24+'px';s.style.animationDuration=6+Math.random()*7+'s';s.style.animationDelay=Math.random()*6+'s';fl.appendChild(s)}}
+spawn(22);
+const no=document.getElementById('no');
+function dodge(){no.style.transform='translate('+(Math.random()*120-60)+'px,'+(Math.random()*60-30)+'px)'}
+no.addEventListener('mouseenter',dodge);
+no.addEventListener('click',()=>{dodge();no.textContent='Please? 🥺'});
+document.getElementById('yes').addEventListener('click',()=>{
+  document.getElementById('win').style.display='block';
+  fl.innerHTML='';spawn(60);
+  document.getElementById('win').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
